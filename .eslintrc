@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "linebreak-style": "off",
+    "no-use-before-define": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "VoxEngine": true,
+    "AppEvents": true,
+    "CallEvents": true,
+    "PhoneNumber": true,
+    "IVRState": true,
+    "Net": true,
+    "CallList": true,
+    "Logger": true,
+    "Language": true
+  }
+}
