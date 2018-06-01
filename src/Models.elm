@@ -4,12 +4,18 @@ import RemoteData exposing (WebData)
 
 
 type alias Model =
-    { players : WebData (List Player) }
+    { players : WebData (List Player), route : Route }
 
 
-initialModel : Model
-initialModel =
-    { players = RemoteData.Loading }
+type Route
+    = PlayersRoute
+    | PlayerRoute PlayerId
+    | NotFoundRoute
+
+
+initialModel : Route -> Model
+initialModel route =
+    { players = RemoteData.Loading, route = route }
 
 
 type alias PlayerId =
